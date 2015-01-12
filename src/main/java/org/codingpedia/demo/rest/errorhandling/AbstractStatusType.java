@@ -3,7 +3,6 @@ package org.codingpedia.demo.rest.errorhandling;
 import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.Response.Status.Family;
 import javax.ws.rs.core.Response.StatusType;
-
 /**
  * Class used to provide custom StatusTypes, especially for the the Reason Phrase that appears in the HTTP Status Response
  */

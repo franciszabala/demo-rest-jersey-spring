@@ -9,6 +9,7 @@ import javax.ws.rs.ext.Provider;
 public class AppExceptionMapper implements ExceptionMapper<AppException> {
 
 	public Response toResponse(AppException ex) {
+		System.out.println("WRAPPERNESS");
 		return Response.status(ex.getStatus())
 				.entity(new ErrorMessage(ex))
 				.type(MediaType.APPLICATION_JSON).

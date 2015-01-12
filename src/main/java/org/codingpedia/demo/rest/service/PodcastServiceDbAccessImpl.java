@@ -84,6 +84,7 @@ public class PodcastServiceDbAccessImpl implements PodcastService {
 	public Podcast getPodcastById(Long id) throws AppException {		
 		PodcastEntity podcastById = podcastDao.getPodcastById(id);
 		if(podcastById == null){
+			System.out.println("POOP");
 			throw new AppException(Response.Status.NOT_FOUND.getStatusCode(), 
 					404, 
 					"The podcast you requested with id " + id + " was not found in the database",
@@ -210,7 +211,6 @@ public class PodcastServiceDbAccessImpl implements PodcastService {
 		
 	}
 
-	@Override
 	public void generateCustomReasonPhraseException() throws CustomReasonPhraseException {		
 		throw new CustomReasonPhraseException(4000, "message attached to the Custom Reason Phrase Exception");		
 	}

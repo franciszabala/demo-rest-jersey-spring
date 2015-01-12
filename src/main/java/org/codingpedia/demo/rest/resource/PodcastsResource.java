@@ -144,6 +144,7 @@ public class PodcastsResource {
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public Response getPodcastById(@PathParam("id") Long id, @QueryParam("detailed") boolean detailed)
 			throws IOException,	AppException {
+		System.out.println("HEY THERE");
 		Podcast podcastById = podcastService.getPodcastById(id);
 		return Response.status(200)
 				.entity(podcastById, detailed ? new Annotation[]{PodcastDetailedView.Factory.get()} : new Annotation[0])
